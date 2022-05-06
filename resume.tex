@@ -1,0 +1,143 @@
+\documentclass{bluefin_cv}
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
+\name{Josh}{Finnie}
+\phone{860.716.5996}
+\email{josh@jfin.us}
+\linkedin{joshfinnie}
+\homepage{www.joshfinnie.com}
+
+\begin{document}
+
+%------------------------------------------------------------------------------
+% HEADER
+%------------------------------------------------------------------------------
+\makeheader
+
+%------------------------------------------------------------------------------
+% PROFESSIONAL STATEMENT
+%------------------------------------------------------------------------------
+\begin{bfcvSection}{Introduction}
+I am an experienced polyglot software engineer who’s specialties lie in building large-scale, complex APIs, interactive websites and engineering-improving internal tooling. I have over 10 years of software development experience ranging from the fast-paced world of startups to working on many different contracts with a small, independent team of developers.
+\end{bfcvSection}
+
+%------------------------------------------------------------------------------
+% PROFESSIONAL EXPERIENCE
+%------------------------------------------------------------------------------
+\begin{bfcvSection}{Professional Experience}
+
+\begin{bfcvWorkSubsection}{PBS}{Sept 2019 - Present}{Senior Software Engineer}
+\item Modernizing legacy Django applications by adding a test suite, upgrading packages, and updating deployment infrastructure to enhance readability and security.
+\item Lead development in new GraphQL endpoint for content distribution taking into account different team needs.
+\item Developing a deployment infrastructure framework for PBS Engineering to unify how micro-services get deployed to Amazon AWS; written in Go.
+\item Being a go-to generalist who helps brainstorm and fix cross-team architecture problems along with helping optimizing my team's overall workflow.
+\item Develop cross-application best practices for code quality and testing infrastructure.
+\item Be a thought leader for experimental changes through out the engineering team at PBS and share learnings through tech talks and presentations.
+\item Run weekly coding practices to better improve PBS Engineering's understanding of complex code issues.
+\end{bfcvWorkSubsection}
+
+\begin{bfcvWorkSubsection}{Skyword (Merged with TrackMaven)}{Mar 2014 - Aug 2019}{Senior Software Engineer (Promoted from Software Engineer)}
+\item Lead effort to unify users between the TrackMaven platform and the Skyword platform; creating a unified login micro-service in Django which synced the two platform's authentication.
+\item Developed the implementation of best practices for continual security upgrades for all repositories using Snyk, Dependabot and Github Security Hub.
+\item Worked as the lead architect on the migration of our base Django application to Python 3 while also upgrading all application dependencies.
+\item Worked on the re-architecture of our Kubernetes infrastructure introducing better best-practices in deployment through Terraform.
+\item Part the senior engineering team in charge of on-call triage of problems and after-hour deployments of our multiple services.
+\item Provided direct technical support to Software Maven team members and collaborative technical support to other departments within TrackMaven.
+\item Developed testing protocols and best practices to support a successful transition of the live web application from CoffeeScript to modern JavaScript.
+\item Established and led a Quality and Infrastructure engineering team that focuses on promoting sound application infrastructure through ensuring high quality code and developing best practices across the engineering department.
+\end{bfcvWorkSubsection}
+
+\begin{bfcvWorkSubsection}{Koansys, LLC.}{Feb 2012 - Mar 2014}{Application Developer}
+\item Developed and deployed the Interactive Satellite Tracker (iSat), an application written in JavaScript that calculates satellite positioning in real-time based off of open-source data for Science@NASA,
+\item Actively maintained iSat and created application enhancements to meet the needs of Science@NASA.
+\item Designed and built cloud infrastructure and automated scripts using Ansible to migrate Science@NASA’s Content Management System to Amazon Web Services.
+\item Transitioned Science@NASA’s Content Management System from Django to Drupal
+\item Designed a front-end web application, using the Pyramid Framework and written in Angular.js, which allows the customer to interact with a custom-built Python API
+\end{bfcvWorkSubsection}
+\end{bfcvSection}
+
+%------------------------------------------------------------------------------
+% Technical Strengths
+%------------------------------------------------------------------------------
+\begin{bfcvSection}{Technical Strengths}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Backend Technology & Python (Django, Flask, FastAPI), Node.js, Rust, Go \\
+Frontend Technology & Javascript (React, Vue, Next.js), HTML5, CSS (Bootstrap/Tailwind)\\
+Databases & PostgreSQL, Redis, MongoDB, MySQL, FinDB \\
+Cloud Technologies & Amazon Web Services, Docker, Terraform, Ansible, Fabric\\
+Concepts & Agile, SCRUM, SEO
+\end{tabular}
+
+\end{bfcvSection}
+
+%------------------------------------------------------------------------------
+% PERSONAL PROJECTS
+%------------------------------------------------------------------------------
+\begin{bfcvSection}{Highlighted Personal Projects}
+
+\begin{bfcvProjSubsection}{wasm-frontmatter}{https://www.npmjs.com/package/wasm-frontmatter}
+\item A clone of grey-matter written in Rust. The rust code is used to generate Wasm code and is then released to NPM. My tests have found that Wasm-Frontmatter is three times faster than the javascript equivalent.
+\end{bfcvProjSubsection}
+
+\begin{bfcvProjSubsection}{CubeCobra}{https://www.cubecobra.com/}
+\item CubeCobra is an open-source website used by the Magic the Gathering community to host their cube information. I have been helping since the early start of CubeCobra mostly consulting with the community to build strong best practices within the code base.
+\end{bfcvProjSubsection}
+
+\begin{bfcvProjSubsection}{PushFile}{https://www.npmjs.com/package/pushfile}
+\item A project written in Node.js which allows you to push a file to Amazon Web Services S3 and gives you an URL in return. This is written using the latest javascript syntax and uses Babel to compile into ES5 to work as a command line application.
+\end{bfcvProjSubsection}
+
+\begin{bfcvProjSubsection}{Gorson}{https://github.com/pbs/gorson}
+\item A application written in Go that aids PBS employees to better interact with AWS Parameter Store. Gorson allows for an easy API to add, edit, and delete environment variables stored in the parameter store.
+\end{bfcvProjSubsection}
+
+\begin{bfcvProjSubsection}{JoshFinnie.com}{https://www.joshfinnie.com}
+\item My personal blogging site written using the Astro.Build static site generator. Takes advantage of Tailwind CSS and is hosted on Netlify for high-availability. I write about learnings of software development and tutorials.
+\end{bfcvProjSubsection}
+
+\smallskip
+\centerline{\textsl{More open-source projects can be found at https://www.github.com/joshfinnie/}}
+
+\end{bfcvSection}
+
+%------------------------------------------------------------------------------
+% TALKS & PRESENTATIONS
+%------------------------------------------------------------------------------
+\begin{bfcvSection}{Talks \& Presentations}
+\begin{bfcvListSubsection}
+\item gRPC Walkthrough and Programming Showcase - \textsl{PBS Internal Tech Talk}, June 23rd, 2021
+\item Building Wasm-Frontmatter - \textsl{RustDC}, March 16, 2021
+\item Intro to Rust and Wasm for Javascript Developers - \textsl{DC JS}, December 9, 2020
+\item Docker Multi-stage Builds and other Best Practices - \textsl{PBS Internal Tech Talk}, July, 21, 2020
+\item Docker's Best Practices- \textsl{Django District, etc.}, October 02, 2019
+\item Kubernetes Overview Offsite - \textsl{Skyword Internal Talk}, May 10, 2019
+\item GraphQL Lunch \& Learn - \textsl{TrackMaven Internal Talk}, September 4, 2018
+\item Flask, Zappa, and AWS Lambda - \textsl{Django District, etc.}, January 24, 2017
+\item Decoupling our Angular.js App - \textsl{AngularJS DC}, October 19, 2016
+\item Quick and Dirty AWS Lambda in Node.js - \textsl{NodeDC}, July 21, 2016
+\item CoffeeScript and the Road to ES2015 - \textsl{JavaScript DC}, June 23, 2016
+\item Dockerizing your Node App in 5 Minutes - \textsl{NodeDC}, March 17, 2016
+\item Command Line Applications in Node.js - \textsl{NationJS 2015}, November 13, 2015
+\item A DSL in Python - \textsl{Django District, etc.}, October 27, 2015
+\item A Pythonista's Day-O-Haskell -  \textsl{TrackMaven Monthly Challenge}, September 30, 2015
+\item Sneaking React into Angular -  \textsl{TrackMaven Monthly Challenge}, May 27, 2015
+\item iSat: Lightning Talk -  \textsl{TrackMaven Monthly Challenge}, January 19, 2015
+\end{bfcvListSubsection}
+\smallskip
+\centerline{\textsl{All talks can be found at https://www.joshfinnie.com/talks/}}
+\end{bfcvSection}
+
+%------------------------------------------------------------------------------
+% EDUCATION
+%------------------------------------------------------------------------------
+\begin{bfcvSection}{Education}
+{\bf Central Connecticut State University}
+\\ Classes towards a Masters of Science in Geography (GIS Track).\hfill\\
+{\bf University of Connecticut}
+\\ Bachelors of Art, Economics. (Certificate in Quantitative Economics \& Minor in Mathematics).\hfill\\
+\end{bfcvSection}
+
+%------------------------------------------------------------------------------
+% END OF FILE
+%------------------------------------------------------------------------------
+\end{document}
