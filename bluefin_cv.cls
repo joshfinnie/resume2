@@ -2,7 +2,7 @@
 % BlueFin CV - A RESUME CLASS FILE
 % This class file defines the structure and design of the template.
 %
-% Copyright (c) 2020-2021 Josh Finnie <josh@jfin.us>
+% Copyright (c) 2020-2023 Josh Finnie <josh@jfin.us>
 %
 % Permission is hereby granted, free of charge, to any person obtaining a copy
 % Of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@
 % SOFTWARE.
 % ------------------------------------------------------------------------------
 
-\ProvidesClass{bluefin_cv}[2020/04/15 v0.1 BlueFin CV class]
+\ProvidesClass{bluefin_cv}[2023/05/23 v0.2 BlueFin CV class]
 \NeedsTeXFormat{LaTeX2e}
 
 \LoadClass[10pt,letterpaper]{article}   % Font size and paper type
@@ -121,7 +121,7 @@
       {}
       {
         \ifbool{isstart}{\setbool{isstart}{false}}{\infoSep}
-        \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedinSquare\space\@linkedin}
+        \href{https://www.linkedin.com/in/\@linkedin/}{\faLinkedinSquare\space\@linkedin}
       }
     \ifthenelse{\isundefined{\@twitter}}
       {}
@@ -132,7 +132,7 @@
 }
 
 %------------------------------------------------------------------------------
-%	SECTION FORMATTING
+%  SECTION FORMATTING
 %------------------------------------------------------------------------------
 
 % Defines the bfcvSection environment for the large sections within the CV
@@ -151,7 +151,7 @@
 }
 
 %------------------------------------------------------------------------------
-%	WORK EXPERIENCE FORMATTING
+%  WORK EXPERIENCE FORMATTING
 %------------------------------------------------------------------------------
 
 % Defines the bfcvWorkSubsection environment for the work experiences within the CV
