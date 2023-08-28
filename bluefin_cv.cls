@@ -156,11 +156,8 @@
 
 % Defines the bfcvWorkSubsection environment for the work experiences within the CV
 \newenvironment{bfcvWorkSubsection}[3]{             % 3 input arguments - company name, year(s) of employment, and job title
- {\bf #1} \hfill {#2}                               % Bold company name and put date on the right
- \ifthenelse{\equal{#3}{}}{}{                       % If the third argument is not specified, don't print the job title
-  \\
-  {\em #3}                                          % Italic job title
-  }\smallskip
+ {\bf #1}\hspace{1em}{#3} \hfill {#2}                               % Bold company name and put date on the right
+  \smallskip
   \begin{list}{$\cdot$}{\leftmargin=1em}            % \cdot used for bullets, no indentation
    \itemsep -0.5em \vspace{-0.5em}                  % Compress items in list together for aesthetics
   }{
