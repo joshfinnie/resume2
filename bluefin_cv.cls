@@ -153,8 +153,21 @@
   \subsection{{\bf #1} \hspace{1em}#3 \hfill #2}
 }
 
+\newcommand{\bfcvjobdescription}[1]{
+  \justify{#1}
+  \newline
+  \newline
+}
+
+\newenvironment{bfcvsuccesslist}{
+  Highlighted Successes:
+  \begin{list}{$\cdot$}{\leftmargin=1em}
+   \itemsep -0.5em \vspace{-0.5em}
+ }{
+  \end{list}
+}
+
 \newenvironment{bfcvlist}{
-  \smallskip
   \begin{list}{$\cdot$}{\leftmargin=1em}
    \itemsep -0.5em \vspace{-0.5em}
  }{
@@ -162,8 +175,7 @@
 }
 
 \newcommand{\technologies}[1]{
-  \vspace{-0.5em}
-  {\em Technologies}: #1
+  {\em Technologies Used}: #1
   \vspace{-0.5em}
 }
 
@@ -174,4 +186,15 @@
 \newcommand{\projectsubsection}[2]{
   \subsection{{\bf #1} \hfill #2}
   \vspace{-0.5em}
+}
+
+\newcommand{\bfcvtalk}[3]{
+  #1 - {\em #2}, #3
+}
+
+\newcommand{\education}[2]{
+  {\bf #1}
+  \newline
+  \indent\hspace{1em} #2
+  \newline
 }
