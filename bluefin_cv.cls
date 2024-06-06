@@ -23,7 +23,7 @@
 % SOFTWARE.
 % ------------------------------------------------------------------------------
 
-\ProvidesClass{bluefin_cv}[2023/09/25 v0.2 BlueFin CV class]
+\ProvidesClass{bluefin_cv}[2024/06/05 v0.2 BlueFin CV class]
 \NeedsTeXFormat{LaTeX2e}
 
 \LoadClass[10pt,letterpaper]{article}   % Font size and paper type
@@ -56,6 +56,12 @@
 \newcommand*{\firstname}[1]{\def\@firstname{#1}}
 \newcommand*{\lastname}[1]{\def\@lastname{#1}}
 
+% Defines position (optional)
+\newcommand*{\position}[1]{\def\@position{#1}}
+
+% Defines location (optional)
+\newcommand*{\location}[1]{\def\@location{#1}}
+
 % Defines mobile (optional)
 \newcommand*{\phone}[1]{\def\@phone{#1}}
 
@@ -80,108 +86,115 @@
 % Defines makeheader
 \newcommand*{\makeheader}{
   \centering
-    \MakeUppercase{\namesize\bf \@firstname\space\@lastname}
-    \smallskip
-    \par
-    \newbool{isstart}
-    \booltrue{isstart}
-    \ifthenelse{\isundefined{\@phone}}
-      {}
-      {
-        \ifbool{isstart}{
-          \boolfalse{isstart}
-        }{
-          \infoSep
-        }
-        \faMobile\space\@phone
-      }
-    \ifthenelse{\isundefined{\@email}}
-      {}
-      {
-        \ifbool{isstart}{
-          \boolfalse{isstart}
-        }{
-          \infoSep
-        }
-        \href{mailto:\@email}{\faEnvelope\space\@email}
-      }
-    \ifthenelse{\isundefined{\@homepage}}
-      {}
-      {
-        \ifbool{isstart}{
-          \boolfalse{isstart}
-        }{
-          \infoSep
-        }
-        \href{http://\@homepage}{\faGlobe\space\@homepage}
-      }
-    \ifthenelse{\isundefined{\@linkedin}}
-      {}
-      {
-        \ifbool{isstart}{\setbool{isstart}{false}}{\infoSep}
-        \href{https://www.linkedin.com/in/\@linkedin/}{\faLinkedinSquare\space\@linkedin}
-      }
-    \ifthenelse{\isundefined{\@twitter}}
-      {}
-      {
-        \ifbool{isstart}{\setbool{isstart}{false}}{\infoSep}
-        \href{https://twitter.com/\@twitter}{\faTwitter\space\@twitter}
-      }
+  \MakeUppercase{\namesize\bf\@firstname\space\@lastname}
+  \space
+  {\titlesize\bf\@position}
+  \smallskip
+  \par
+  \newbool{isstart}
+  \booltrue{isstart}
+  \ifthenelse{\isundefined{\@location}}
+  {}
+  {
+    \ifbool{isstart}{
+      \boolfalse{isstart}
+    }{
+      \infoSep
+    }
+    \faHome\space\@location
+  }
+  \ifthenelse{\isundefined{\@phone}}
+  {}
+  {
+    \ifbool{isstart}{
+      \boolfalse{isstart}
+    }{
+      \infoSep
+    }
+    \faMobile\space\@phone
+  }
+  \ifthenelse{\isundefined{\@email}}
+  {}
+  {
+    \ifbool{isstart}{
+      \boolfalse{isstart}
+    }{
+      \infoSep
+    }
+    \href{mailto:\@email}{\faEnvelope\space\@email}
+  }
+  \ifthenelse{\isundefined{\@homepage}}
+  {}
+  {
+    \ifbool{isstart}{
+      \boolfalse{isstart}
+    }{
+      \infoSep
+    }
+    \href{http://\@homepage}{\faGlobe\space\@homepage}
+  }
+  \ifthenelse{\isundefined{\@linkedin}}
+  {}
+  {
+    \ifbool{isstart}{\setbool{isstart}{false}}{\infoSep}
+      \href{https://www.linkedin.com/in/\@linkedin/}{\faLinkedinSquare\space\@linkedin}
+  }
+  \ifthenelse{\isundefined{\@twitter}}
+  {}
+  {
+    \ifbool{isstart}{\setbool{isstart}{false}}{\infoSep}
+    \href{https://twitter.com/\@twitter}{\faTwitter\space\@twitter}
+  }
 }
 
-%------------------------------------------------------------------------------
-%  SECTION FORMATTING
-%------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% SECTION FORMATTING
+% ------------------------------------------------------------------------------
 \titleformat{\section}
 {
   \raggedright
   \bf
 }
-{}{0em}
+{}
+{0em}
 {\MakeUppercase}
 [\titlerule]
 
 \titleformat{\subsection}
-  {\raggedright}
-  {}{0em}
-  {}
+{\raggedright}
+{}
+{0em}
+{}
 
-%------------------------------------------------------------------------------
-%  WORK EXPERIENCE FORMATTING
-%------------------------------------------------------------------------------
-\newcommand{\datedsubsection}[3]{
+% ------------------------------------------------------------------------------
+% WORK EXPERIENCE FORMATTING
+% ------------------------------------------------------------------------------
+\newcommand{\workexperience}[6]{
   \subsection{{\bf #1} \hspace{1em}#3 \hfill #2}
-}
-
-\newcommand{\bfcvjobdescription}[1]{
-  \justify{#1}
+  \justify{#4}
+  \vspace{0.5em}
   \newline
+  {\em Technologies}: #6
+  \vspace{0.5em}
   \newline
-}
-
-\newenvironment{bfcvsuccesslist}{
-  Highlighted Successes:
+  {\em Highlights}:
   \begin{list}{$\cdot$}{\leftmargin=1em}
-   \itemsep -0.5em \vspace{-0.5em}
- }{
+    \itemsep -0.5em \vspace{-0.5em}
+    #5
   \end{list}
 }
 
-\newenvironment{bfcvlist}{
-  \begin{list}{$\cdot$}{\leftmargin=1em}
-   \itemsep -0.5em \vspace{-0.5em}
- }{
-  \end{list}
+\newcommand{\workexperiencenh}[5]{
+  \subsection{{\bf #1} \hspace{1em}#3 \hfill #2}
+  \justify{#4}
+  \vspace{0.5em}
+  \newline
+  {\em Technologies}: #5
 }
 
-\newcommand{\technologies}[1]{
-  {\em Technologies Used}: #1
-  \vspace{-0.5em}
-}
-
-%------------------------------------------------------------------------------
-%  PROJECT FORMATTING
-%------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% PROJECT FORMATTING
+% ------------------------------------------------------------------------------
 
 \newcommand{\projectsubsection}[2]{
   \subsection{{\bf #1} \hfill #2}
