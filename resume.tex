@@ -1,217 +1,151 @@
-\documentclass{bluefin_cv}
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
-\name{Josh}{Finnie}
-\position{Experienced Software Enginner}
-\location{Charlotte, NC}
-\phone{860-716-5996}
+\documentclass{ast_resume}
+\fullname{Josh}{Finnie}
+\position{Experienced Software Engineer}
 \email{josh@jfin.us}
+\phone{(860) 716-5996}
 \linkedin{joshfinnie}
+\github{joshfinnie}
 \homepage{www.joshfinnie.com}
+\location{Charlotte, NC}
 
+%------------------------------------------------------------------------------
+% BEGINNING OF DOCUMENT
+%------------------------------------------------------------------------------
 \begin{document}
 
-% ------------------------------------------------------------------------------
-% HEADER
-% ------------------------------------------------------------------------------
 \makeheader
+\renewcommand{\baselinestretch}{1.5}
 
 % ------------------------------------------------------------------------------
 % PROFESSIONAL STATEMENT
 % ------------------------------------------------------------------------------
-\section{Introduction}
 \justify{
   With over 10 years of experience in software engineering, I specialize in building scalable APIs, interactive websites, and optimizing internal team processes.
   My career demonstrates a commitment to technical excellence, innovative problem-solving, and leadership in developing robust software solutions.
   I combine deep technical expertise with a passion for mentoring and process improvement, driving both project success and team growth.
 }
 
-% ------------------------------------------------------------------------------
-% Technical Strengths
-% ------------------------------------------------------------------------------
-%\section{Technical Strengths}
-%\hspace*{-0.25cm}
-%\begin{tabular}{>{\bfseries}p{0.25\textwidth}p{0.70\textwidth}}
-%  Backend Technology & Python, Node.js, Rust, Go \\
-%  Frontend Technology & Javascript/Typescript, CSS, htmx \\
-%  Databases & PostgreSQL, Redis, MongoDB, MySQL \\
-%  Other Technologies & AWS, Docker, Pulumi, Terraform, Kubernetes, GraphQL \\
-%\end{tabular}
-
 %------------------------------------------------------------------------------
 % PROFESSIONAL EXPERIENCE
 %------------------------------------------------------------------------------
-\section{Professional Experience}
+\section{Work Experience}
 
-\workexperience{Senior Software Engineer}{05/2023 - Present}{People Data Labs}
+\workexperience{Senior Software Engineer}{May 2023 - Present}{People Data Labs}{Remote}
 {
-  Lead back-end engineer on the Delivery and API team, enhancing customer interactions with our data via API.
-  Collaborate with engineering, data science, product, and other technical teams to build compliant, innovative, people-data-based software solutions.
+  Lead back-end engineer focused on building scalable APIs and cloud-based solutions that enhance customer interactions with  data.
 }
 {
-  \item {\bf Bug Resolution}: Reduce customer complaints by 20\% within the first year by addressing issues raised by Customer Success and Product teams promptly.
-  \item {\bf API Development}: Implement best practices significantly improved the existing Flask codebase, and deprecated an outdated Django codebase.
-  \item {\bf Project Leadership}: Act as captain for monthly data update launches, coordinating efforts between the API team and the Data team to ensure seamless updates.
-  \item {\bf SDK Development}: Helped develop and maintain the People Data Labs' SDKs. Wrote the Rust SDK in its entirety.
+  \item API Development: Leading the development of RESTful APIs, reducing data access issues by 25\%.
+  \item Project Leadership: Act as captain for monthly data update launches, coordinating efforts between the API team and the Data team to ensure seamless updates.
+  \item SDK Development: Authored the Rust SDK, contributing to SDKs across multiple languages to improve developer experience.
 }
 {
   Python,
-  Pulumi,
-  Docker,
-  Rust,
-  Go,
   AWS (RDS, Elasticache, Lambda, Batch)
-}
-
-\workexperience{Staff Software Engineer}{05/2022 - 03/2023}{IndigoAg}
-{
-  Contributed to Carbon by Indigo, a platform enabling farmers to earn income through sustainable practices leading to high-quality, registry-issued carbon credits.
-  Collaborated with external partners to integrate their data into our carbon sequestration models.
-}
-{
-  \item {\bf API Development}: Developed the next-generation Carbon Sequestration application API using Flask, working closely with stakeholders and the product team to deliver a robust solution.
-  \item {\bf Project Leadership}: Led the process from initial architecture to final development, resulting in increased adoption of the carbon sequestration application.
-  \item {\bf Mentorship}: Mentored junior developers and established best practices across the engineering department, fostering a culture of continuous improvement.
-  \item {\bf Technical Documentation}: Authored comprehensive technical documentation to streamline company-wide data backfill procedures, enhancing overall operational efficiency.
-  %\item Was part of the on-call rotation keeping the webapp running during crutial, heavy-load times.
-}
-{
-  Python,
-  AWS RDS,
-  Javascript,
-  Docker
-}
-
-\workexperience{Senior Software Engineer}{09/2019 - 05/2022}{PBS}
-{
-  Led development on PBS.org's backend, focusing on critical projects like device authentication and enhanced website search functionality, ensuring seamless user experiences.
-}
-{
-  \item {\bf Legacy Modernization}: Modernized legacy Django applications by adding a comprehensive test suite, upgrading packages, and updating deployment infrastructure, significantly enhancing readability and security.
-  \item {\bf GraphQL Architecture}: Led the development of a new GraphQL endpoint for content distribution, addressing the diverse needs of various teams and improving content delivery efficiency.
-  \item {\bf Infrastructure Improvement}: Created a unified infrastructure framework for PBS Engineering, standardizing service deployment to AWS and streamlining operational processes.
-  \item {\bf Code Quality Standards}: Developed cross-application best practices for code quality and testing infrastructure, ensuring high standards across all projects.
-  %\item Thought Leadership: Acted as a thought leader for experimental changes, sharing insights and learnings through tech talks and presentations, fostering innovation within the engineering team.
-  %\item Was a go-to generalist who helps brainstorm and fix cross-team architecture problems along with helping optimizing my team's overall workflow.
-  %\item Ran weekly coding practices to better improve PBS Engineering's understanding of complex code issues.
-}
-{
-  Python,
-  Javascript,
-  Go,
-  CSS,
-  PostgreSQL,
   Docker,
-  GraphQL,
+  Pulumi,
+  Rust,
+  Go
+}
+\vspace{1em}
+\workexperience{Staff Software Engineer}{May 2023 - Mar 2023}{IndigoAg}{Remote}
+{
+  Contributed to Carbon by Indigo, a platform enabling farmers to generate revenue through sustainable farming practices and verified carbon credits. Collaborated with external partners to integrate their data into carbon sequestration models.
+}
+{
+  \item 
+API Development: Designed and developed the next-gen Carbon Sequestration API using Flask, delivering a scalable and high-performing solution that met stakeholder requirements.
+  \item Project Leadership: Spearheaded the project lifecycle, from initial architecture design to deployment, increasing user adoption of the carbon sequestration platform by 50\%.
+  \item Mentorship and Team Development: Mentored junior engineers, established engineering best practices, and fostered a collaborative environment focused on continuous improvement.
+  \item Technical Documentation and Process Improvement: Authored detailed technical documentation to support company-wide data backfill processes, improving operational efficiency by 20\%.
+}
+{
+  Python,
+  JavaScript,
+  AWS RDS
+}
+\vspace{1em}
+\workexperience{Senior Software Engineer}{Spet 2019 - May 2022}{PBS}{Crystal City, VA}
+{
+  Led modernization of backend services for PBS.org, focusing on improving cloud infrastructure and enhancing website functionality.
+}
+{
+  \item Legacy Modernization: Spearheaded modernization efforts, migrating from legacy Django to cloud-native infrastructure, improving scalability and reducing downtime.
+  \item GraphQL Architecture: Designed and implemented a GraphQL endpoint to improve content distribution efficiency across multiple teams.
+  \item Security Enhancements: Enhanced code quality and security across projects by implementing automated testing pipelines and security audits.
+}
+{
+  Python,
+  Docker,
   AWS (ECS, ECR)
+  JavaScript,
+  GraphQL,
+  Go
 }
-
-\workexperience{Senior Software Engineer}{10/2018 - 08/2019}{Skyword (Acquired TrackMaven)}
+\vspace{1em}
+\workexperience{Senior Software Engineer}{Mar 2024 - Aug 2019}{TrackMaven $\rightarrow$ Skyword}{Washington, DC}
 {
-  Led the integration effort to unify users between the TrackMaven and Skyword platforms, implementing best practices for security upgrades to ensure a seamless and secure user experience.
+  Joined TrackMaven as the fourth engineer, contributing to both backend and frontend development for a leading social media management company. Post-acquisition, played a pivotal role in integrating TrackMaven’s platform with Skyword.
 }
 {
-  \item {\bf User Integration}: Led the effort to unify users between the TrackMaven and Skyword platforms by developing a unified login micro-service in Django, synchronizing authentication across both platforms.
-  \item {\bf Security Enhancements}: Designed and implemented best practices for continuous security upgrades using Snyk, Dependabot, and GitHub Security Hub, ensuring the repositories remained secure and up-to-date.
-  \item {\bf Cross-Platform Data Exchange}: Developed a robust data exchange system between TrackMaven’s Django infrastructure and Skyword’s Java infrastructure, facilitating seamless data flow between the two systems.
+  \item User Integration \& Authentication: Led the development of a unified login microservice in Django, synchronizing authentication for 1000+ users between TrackMaven and Skyword platforms, improving security and user experience.
+  \item Programming Language Updates: Led the migration of TrackMaven’s core app to Python 3 for improved performance and sustainability. Established testing protocols to transition the web app from CoffeeScript to modern JavaScript, enhancing maintainability and performance.
+  \item Leadership \& On-Call Support: Led the Quality and Infrastructure team, promoting robust engineering practices, and served on-call to ensure the stability of mission-critical services.
+  \item Security \& Infrastructure Enhancements: Implemented security best practices using tools like Snyk, Dependabot, and GitHub Security Hub, and co-led the architecture for Kubernetes infrastructure using Terraform, streamlining deployments.
 }
 {
   Python,
+  JavaScript,
   PostgreSQL,
+  AWS (Full Suite),
   Redis,
   Docker,
   Kubernetes,
-  Kotlin,
-  AWS (full suite)
+  Terraform
 }
-
-\workexperience{Software Engineer \(\rightarrow\) Senior Software Engineer}{03/2014 - 10/2018}{TrackMaven}
+\vspace{1em}
+\workexperience{Application Developer}{Feb 2012 - Mar 2014}{KoanSys, LLC}{Arlington, VA}
 {
-  Joined as the fourth engineer in a leading social media management company working with Fortune 500 companies to enhance their social media presence.
-  Played a versatile role in both frontend and backend development.
+  As the first hire at an engineering consulting firm, contributed to multiple contracts, ranging from migrating web software to current best practices to developing an Interactive Satellite Tracker (iSat) for Science@NASA.
 }
 {
-  \item {\bf Python 3 Migration}: Led the architecture and execution of migrating the core Django application, upgrading all application dependencies to ensure compatibility and performance improvements.
-  \item {\bf Kubernetes Infrastructure}: Co-led planning and architecture, introducing deployment best practices through Terraform, enhancing deployment efficiency and reliability.
-  \item {\bf On-Call Leadership}: Served on the senior engineering team responsible for on-call triage and after-hours deployments, ensuring the stability and availability of multiple services.
-  \item {\bf JavaScript Transition}: Developed testing protocols and best practices to support the successful transition of the live web application from CoffeeScript to modern JavaScript, improving code maintainability and performance.
-  \item {\bf Quality and Infrastructure Team}: Established and led the team, focusing on promoting robust application infrastructure, high-quality code, and best practices across the engineering department.
-  %\item Provided direct technical support to Software Maven team members and collaborative technical support to other departments within TrackMaven.
+  \item iSat Development: Developed and deployed the Interactive Satellite Tracker (iSat), a JavaScript application that calculates real-time satellite positioning using open-source data for Science@NASA.
+  \item Cloud Migration: Designed and built cloud infrastructure and automated migration scripts using Ansible, transitioning Science@NASA’s Content Management System from Django to Drupal and moving it to Amazon Web Services.
 }
 {
   Python,
-  Javascript,
-  PostgreSQL,
-  Redis,
-  Docker,
-  Kubernetes,
-  Terraform,
-  AWS (full suite)
-}
-
-\workexperience{Application Developer}{02/2012 - 03/2014}{Koansys, LLC}
-{
-  As the first hire at an engineering consulting firm, contributed to multiple contracts, ranging from migrating software to current best practices to developing an Interactive Satellite Tracker (iSat) for Science@NASA.
-}
-{
-  \item {\bf iSat Development}: Developed and deployed the Interactive Satellite Tracker (iSat), a JavaScript application that calculates real-time satellite positioning using open-source data for Science@NASA.
-  %\item {\bf Application Maintenance}: Enhanced and maintained the iSat application to continually meet the evolving needs of Science@NASA.
-  \item {\bf Cloud Migration}: Designed and built cloud infrastructure and automated migration scripts using Ansible, transitioning Science@NASA’s Content Management System from Django to Drupal and moving it to Amazon Web Services.
-}
-{
-  Python,
-  Javascript,
+  JavaScript,
   Drupal,
-  AWS (EC2, S3, Route53, Cloudfront, API Gateway)
+  AWS (EC2, S3, Route53, Cloudfront, API Gateway),
+  Ansible
 }
 
-%------------------------------------------------------------------------------
-% PERSONAL PROJECTS
-%------------------------------------------------------------------------------
-%\section{Highlighted Personal Projects}
+\section{Highlighted Personal Projects}
 
-%\projectsubsection{wasm-frontmatter}{https://www.npmjs.com/package/wasm-frontmatter}
-%\justify{A clone of grey-matter written in Rust. The project is used to generate Wasm code and is released on NPM. My tests have found that Wasm-Frontmatter is three times faster than the javascript equivalent.}
+\project{HireTrax}{https://hiretrax.app}
+{
+Building a job application tracking tool for people in the software development space. Using Next.js and Supabase, I was accepted into the Buildspace Nights \& Weekends program and built a working prototype in 6 weeks.
+}
+\vspace{1em}
+\project{WASM Frontmatter}{https://www.npmjs.com/package/wasm-frontmatter}
+{
+A clone of the NPM package grey-matter written in Rust. The project is used to generate Wasm code and is released on NPM. My tests have found that Wasm-Frontmatter is 3x faster than the javascript equivalent.
+}
+\vspace{1em}
+\project{My personal blog}{https://www.joshfinnie.com}
+{
+My personal blog written in Typescript using the Astro.build framework. It takes advantage of Tailwind CSS, ShadCN and is hosted on Netlify for high-availability. I write about my learnings in software development and tutorials.
+}
+\vspace{1em}
+\centerline{\footnotesize{More open-source projects found at https://github.com/joshfinnie/}}
 
-%\projectsubsection{PushFile}{https://www.npmjs.com/package/pushfile}
-%\justify{A project written in Node.js which allows you to push a file to Amazon Web Services S3 and gives you an URL in return. Written using the latest TypeScript syntax and is compiled to ES5 so it works as a command line tool.}
-
-%\projectsubsection{JoshFinnie.com}{https://www.joshfinnie.com}
-%\justify{My personal blog written using the Astro.Build static site generator. It takes advantage of Tailwind CSS and is hosted on Netlify for high-availability. I write about my learnings in software development and tutorials.}
-
-%\smallskip
-%\centerline{\textsl{More open-source projects found at https://github.com/joshfinnie/}}
-
-%------------------------------------------------------------------------------
-% TALKS & PRESENTATIONS
-%------------------------------------------------------------------------------
-%\section{Talks \& Presentations}
-%\begin{bfcvlist}
-%  \item \bfcvtalk{Introduction to Python Poetry}{IndigoAg Internal Tech Talk}{February 1st, 2023}
-%  \item \bfcvtalk{Introduction to Asynchronous Python}{IndigoAg Internal Tech Talk}{December 8th, 2022}
-%  \item \bfcvtalk{gRPC Walkthrough and Programming Showcase}{PBS Internal Tech Talk}{June 23rd, 2021}
-%  \item \bfcvtalk{Building Wasm-Frontmatter}{RustDC}{March 16, 2021}
-%  \item \bfcvtalk{Intro to Rust and Wasm for Javascript Developers}{DC JS}{December 9, 2020}
-%  \item \bfcvtalk{Docker Multi-stage Builds and other Best Practices}{PBS Internal Tech Talk}{July, 21, 2020}
-%  \item \bfcvtalk{Docker's Best Practices}{Django District, etc.}{October 02, 2019}
-%  \item \bfcvtalk{Kubernetes Overview Offsite}{Skyword Internal Talk}{May 10, 2019}
-%  \item GraphQL Lunch \& Learn - \textsl{TrackMaven Internal Talk}, September 4, 2018
-%  \item Flask, Zappa, and AWS Lambda - \textsl{Django District, etc.}, January 24, 2017
-%  \item Decoupling our Angular.js App - \textsl{AngularJS DC}, October 19, 2016
-%  \item Quick and Dirty AWS Lambda in Node.js - \textsl{NodeDC}, July 21, 2016
-%  \item CoffeeScript and the Road to ES2015 - \textsl{JavaScript DC}, June 23, 2016
-%\end{bfcvlist}
-%\smallskip
-%\centerline{\textsl{All talks and presentations found at https://www.joshfinnie.com/talks/}}
-
-%------------------------------------------------------------------------------
-% EDUCATION
-%------------------------------------------------------------------------------
 \section{Education}
-\education{University of Maryland Global Campus}{M.S. in Data Analytics (Expected 2026)}
-\education{Central Connecticut State University}{Classes towards a M.S. in Geography (GIS Track)}
-\education{University of Connecticut}{B.A. in Economics. (Certificate in Quantitative Economics \& Minor in Mathematics)}
+
+\education{University of Maryland - Global Campus}{Master of Science: Data Analytics (Expected 2026)}
+\education{Central Connecticut State University}{Classes towards a Master of Science: Geography (GIS Track)}
+\education{University of Connecticut - Storrs}{Bachelor of Arts: Economics. (Certificate in Quantitative Economics \& Minor in Mathematics)}
 
 %------------------------------------------------------------------------------
-% END OF FILE
+% END OF DOCUMENT
 %------------------------------------------------------------------------------
 \end{document}
